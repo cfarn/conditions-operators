@@ -74,11 +74,35 @@ let month = "mai"
 // }
 
 // 07 - Rounded but better
-let roundedNumber = 12.4
+// let roundedNumber = 3.6
 
-if(roundedNumber < (Math.floor(roundedNumber) + 0.6) && roundedNumber > Math.floor(roundedNumber)) {
-    console.log(Math.floor(roundedNumber))
-}else if(roundedNumber > (Math.floor(roundedNumber) + 0.5) && roundedNumber < Math.ceil(roundedNumber)) {
+// if(roundedNumber < (Math.floor(roundedNumber) + 0.6) && roundedNumber > Math.floor(roundedNumber)) {
+//     console.log(Math.floor(roundedNumber))
+// }else if(roundedNumber > (Math.floor(roundedNumber) + 0.5) && roundedNumber < Math.ceil(roundedNumber)) {
+//     console.log(Math.ceil(roundedNumber))
+// }
+
+// let roundedNumber = 3.5
+// let nb1 = Math.floor(roundedNumber)
+// let nb2 = Math.ceil(roundedNumber)
+
+// if(roundedNumber < (nb1 + 0.6) && roundedNumber > nb1) {
+//     console.log(nb1)
+// }else if(roundedNumber > (nb1 + 0.5) && roundedNumber < nb2) {
+//     console.log(nb2)
+// }
+
+// 08 - Rounded but better, Méthode 2
+const roundedNumber = 3.3
+// Isoler le chiffre après le .
+const roundedNumberString = roundedNumber.toString()
+const index = roundedNumberString.indexOf(".")+1
+let decimal = roundedNumberString.substring(index, index+1)
+decimal = Number(decimal)
+// Comparer le chiffre après le . à 5 et arrondir
+if(decimal >= 5){
     console.log(Math.ceil(roundedNumber))
+}else{
+    console.log(Math.floor(roundedNumber))
 }
 
