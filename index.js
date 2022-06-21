@@ -74,4 +74,11 @@ let month = "mai"
 // }
 
 // 07 - Rounded but better
-let roundedNumber = 3.6
+let roundedNumber = 12.4
+
+if(roundedNumber < (Math.floor(roundedNumber) + 0.6) && roundedNumber > Math.floor(roundedNumber)) {
+    console.log(Math.floor(roundedNumber))
+}else if(roundedNumber > (Math.floor(roundedNumber) + 0.5) && roundedNumber < Math.ceil(roundedNumber)) {
+    console.log(Math.ceil(roundedNumber))
+}
+
