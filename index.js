@@ -93,16 +93,24 @@ let month = "mai"
 // }
 
 // 08 - Rounded but better, Méthode 2
+// const roundedNumber = 3.3
+// Isoler le chiffre après le .
+// const roundedNumberString = roundedNumber.toString()
+// const index = roundedNumberString.indexOf(".")+1+
+
+// let decimal = roundedNumberString.substring(index, index+1)
+// decimal = Number(decimal)
+// Comparer le chiffre après le . à 5 et arrondir
+// if(decimal >= 5){
+//     console.log(Math.ceil(roundedNumber))
+// }else{
+//     console.log(Math.floor(roundedNumber))
+// }
+
+// 09 - Rounded but better, Méthode 3
 const roundedNumber = 3.3
 // Isoler le chiffre après le .
-const roundedNumberString = roundedNumber.toString()
-const index = roundedNumberString.indexOf(".")+1
-let decimal = roundedNumberString.substring(index, index+1)
-decimal = Number(decimal)
-// Comparer le chiffre après le . à 5 et arrondir
-if(decimal >= 5){
-    console.log(Math.ceil(roundedNumber))
-}else{
-    console.log(Math.floor(roundedNumber))
-}
-
+const stringifiedNumber = roundedNumber.toString()
+const array = stringifiedNumber.split(".")
+// const stringifiedDecimal
+// Comparer et arrondir
